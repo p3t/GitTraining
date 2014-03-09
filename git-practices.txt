@@ -1,0 +1,14 @@
+1.) Überprüfen Sie den den Arbeitsstatus:
+- Welche Datein sind bearbeitet
+- Welche sind für den commit vorgesehn
+- Was war den letzte commit (Welche Änderungen wurden gemacht)
+
+$ __________________________________ (git status)
+
+$ __________________________________ (git log -1 / git log -n 1)
+
+$ __________________________________ (git show <hash>)
+
+$ __________________________________ (git diff-tree --name-status <hash>)
+
+2.) Fügen Sie alle aktuelle bearbeiteten Datein zu dem Index hinzu und erstellen Sie einen neuen Commit
