@@ -31,3 +31,20 @@ G   (Goto eof) Zum Ende der Datei springen
 :wq (Speichern & Beenden)
 :q! (Quit force) Trotz Änderungen ohne Speichern beenden
 
+== Basics of bash
+Anmerkung: Bash kann mit den selben Key-bindings wie emacs arbeiten.
+Ctrl-A: Springt an den Anfang der Zeile
+Ctrl-K (Yank): Ausschneiden bis Zeilen Ende und speichern in der Zwischenablage (Buffer)
+Ctrl-Y (Paste): Einfügen
+Ctrl-R (Recursive Search): In der History suchen
+
+ls (-al): List directory
+rm: Remove file
+rm -rf: Remove files and dirctories recursive
+find . -name <file>: Im aktuellen Verzeichniss und allen Unterverzeichnissen nache file suchen
+which <cmd>: Pfad zu cmd ausgeben
+pwd: Pfad zu aktuellem Verzeichniss ausgeben
+history: Command history
+!<number>: <number> command aus der history nochmals ausführen.
+
+
