@@ -11,4 +11,32 @@ $ __________________________________ (git show <hash>)
 
 $ __________________________________ (git diff-tree --name-status <hash>)
 
-2.) Fügen Sie alle aktuelle bearbeiteten Datein zu dem Index hinzu und erstellen Sie einen neuen Commit
+2.) Fügen Sie alle aktuelle bearbeiteten Datein zu dem Index hinzu und erstellen Sie einen neuen Commit.
+
+$ __________________________________ (git add .)
+
+$ __________________________________ (git commit)
+
+3.) Erstellen Sie eine neue Datei (z.B. README-NOT.txt) und fügen Sie diese zu dem in 2 erstelleten commit hinzu. Passen Sie dabei die commit-message an und ergänzen Sie "- added README-NOT"
+
+$ __________________________________ (git add .)
+
+$ __________________________________ (git commit --amend)
+
+4.) Fassen Sie den Ihren letzten commit mit dem davor zusammen zu einem Commit.
+
+$ __________________________________ (git rebase -i HEAD~2)
+
+5.) Schieben sie den gerde zusammengefassten commit in der Historie ein commit in die Vergangenheit und teilen Sie den letzten commit auf, so das jede Datei ein eigener commit wird.
+
+$ __________________________________ (git rebase -i HEAD~2)
+
+-> Zeilen umsortieren
+-> jetzt letzten commit per edit markieren
+-> and der Kommandozeile git reset HEAD^
+-> Datei1: git add/commit & Datei2: git add/commit
+-> git rebase --continue
+
+6.) Stellen Sie fest wer welche Änderungen innerhalb der Datei 1 gemacht hat.
+
+$ __________________________________ (git blame <Datei> oder git annotate <Datei>)
