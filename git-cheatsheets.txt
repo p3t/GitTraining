@@ -1,0 +1,33 @@
+http://ndpsoftware.com/git-cheatsheet.html#loc=index;
+
+https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf
+
+http://jan-krueger.net/wordpress/wp-content/uploads/2007/09/git-cheat-sheet.pdf
+
+http://www.entreprehero.com/wp-content/uploads/2012/10/git-cheat-sheet.pdf
+
+https://na1.salesforce.com/help/pdfs/en/salesforce_git_developer_cheatsheet.pdf
+
+== Basics of vi(m)
+http://tnerual.eriogerg.free.fr/vimqrc.pdf
+
+VI hat einen edit und einen command mode:
+ESC - Wechselt vom edit in den command mode
+
+Kommandos die in den edit mode wechseln:
+i (insert) Einfügen an der aktuellen Position
+a (insert after) Einfügen hinter der aktuellen Position
+o (open line) Einfügen unterhalb der aktuellen Zeile
+
+Im Command Mode:
+dd  (Delete line) Ganze Zeile löschen
+x   (Delete char) Aktuelles Zeichen löschen
+dw  (Delete word) Wort von Cursor-position an löschen
+cw  (Change word) Wort von Cursor position an löschen und in den edit-mode springen
+G   (Goto eof) Zum Ende der Datei springen
+:[n] (Goto line) Zu Zeile [n] springen, z.B. :1 springt in die erste Zeile
+:w  (Write) Datei speichern
+:q  (Quit) Beenden
+:wq (Speichern & Beenden)
+:q! (Quit force) Trotz Änderungen ohne Speichern beenden
+

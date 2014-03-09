@@ -1,0 +1,48 @@
+== Git config:
+"~/.gitconfig" or in a per-repository ".git/config"
+
+== Bare Repositories
+
+ mkdir -p /srv/git/repo.git
+ cd /srv/git/repo.git
+ git init --bare
+ 
+ == Squasing the last 2 commits
+ 
+ git rebase -i HEAD~2
+ 
+ => select "fixup" for the second commit to merge it with the first
+ 
+ == Create a topic branch
+ 
+$ git checkout master
+$ git pull --rebase
+$ git checkout -b my-bug-fix-branch
+
+== Merge a topic branch
+(currently on my-bug-fix-branch)
+$ git rebase master
+$ git checkout master
+- If it's only one commit:
+$ git merge -ff my-bug-fix-branch
+(ff means fast-forward which does internally a rebase if possible, no merge-commit)
+- If it's more than one commit
+$ git merge --no-ff my-bug-fix-branch
+(no-ff means no-fast-forward i.e. the history documents the merge with the fix-branch)
+
+== GIT aliases
+create an alias: ("git co" does a checkout)
+$ git config --global alias.co checkout
+git last shows the previous commit
+$ git config --global alias.last 'log -1 HEAD'
+
+== Dateien nur teilweise commiten
+git add --patch
+
+== Commit-Message
+- Erste Zeile nicht länger als 50 Zeichen (Titel)
+- Eine Leerzeile
+- Ausführliche Beschreibung
+- "-" (dash) für Aufzählungen verwenden
+Die Option "-m" besser nicht verwenden, es sei denn man hat vor 
+später den commit zu squashen oder nachzubearbeiten!
