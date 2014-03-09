@@ -36,6 +36,17 @@ $ git config --global alias.co checkout
 git last shows the previous commit
 $ git config --global alias.last 'log -1 HEAD'
 
+== Git commands
+
+Nice log:
+$ git log --pretty=oneline --decorate --graph
+
+Fancy log:
+$ git log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+
+Geänderte Dateien zwichen dem letzten und dem vorletzten commit:
+$ git diff --name-only HEAD~1 HEAD~2
+
 == Dateien nur teilweise commiten
 git add --patch
 
